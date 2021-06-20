@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="16x16">
+    <file>16x16/cil-size-grip.png</file>
+    <file>16x16/cil-media-stop.png</file>
+    <file>16x16/cil-restore.png</file>
+    <file>16x16/cil-minus.png</file>
+    <file>16x16/cil-x.png</file>
+  </qresource>
+</RCC>
