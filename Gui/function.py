@@ -1,9 +1,11 @@
 from PySide6.QtCore import QEasingCurve, QEvent, QPropertyAnimation, Qt, QTimer
 from PySide6.QtGui import QColor, QIcon
-from PySide6.QtWidgets import QGraphicsDropShadowEffect, QSizeGrip
+from PySide6.QtWidgets import QGraphicsDropShadowEffect, QPushButton, QSizeGrip
 
 TIME_ANIMATION = 500
 MAXIMIZED = False
+SELECT = """border-left: 13px solid 
+    qlineargradient(spread:pad, x1:0.034, y1:0, x2:0.416, y2:0, stop:0.499 #55aaff, stop:0.5 rgba(85, 170, 255, 0));"""
 
 
 class Function:
@@ -29,6 +31,7 @@ class Function:
         """Define os Grip para redimensionamento da janela"""
 
         self._parent.sizegrip = QSizeGrip(self._parent.frGrip)
+        self._parent.sizegrip.setStyleSheet("width: 23px; height: 20px; margin 0px; padding: 0px;")
 
     # Remove bordas e background do objeto
     def removeCentralWidget(self):
@@ -54,7 +57,7 @@ class Function:
             MAXIMIZED = True
             self._parent.gridLayout.setContentsMargins(0, 0, 0, 0)
             self._parent.btMax.setToolTip("Restaurar")
-            self._parent.btMax.setIcon(QIcon(u":/16x16/16x16/cil-restore.png"))
+            self._parent.btMax.setIcon(QIcon(":/16x16/16x16/cil-restore.png"))
             self._parent.frGrip.hide()
 
         else:
@@ -63,7 +66,7 @@ class Function:
             self._parent.resize(self._parent.width() + 1, self._parent.height() + 1)
             self._parent.gridLayout.setContentsMargins(10, 10, 10, 10)
             self._parent.btMax.setToolTip("Maximizar")
-            self._parent.btMax.setIcon(QIcon(u":/16x16/16x16/cil-media-stop.png"))
+            self._parent.btMax.setIcon(QIcon(":/16x16/16x16/cil-media-stop.png"))
             self._parent.frGrip.show()
 
     # Maximiza a janela
@@ -104,3 +107,16 @@ class Function:
         self._parent.animation.setEndValue(widthExtended)
         self._parent.animation.setEasingCurve(QEasingCurve.InOutQuart)
         self._parent.animation.start()
+
+    # Define folhas de estilos para a aplicação
+    def setStyleTheme(self, theme_file: str):
+        theme = open(theme_file, "r").read()
+        self._parent.setStyleSheet(theme)
+
+    # Destaca o botão que foi selecionado
+    def setButtomSelect(self, buttom):
+        for widget in self._parent.frMenuLateral.findChildren(QPushButton):
+            if widget.objectName() == buttom.objectName():
+                widget.setStyleSheet(SELECT)
+            else:
+                widget.setStyleSheet("")

@@ -25,6 +25,7 @@ class WinPyBase(QMainWindow, Ui_PyBase):
         function.setDropShadow(self.frBase)
         function.removeCentralWidget()
         function.setDevelopVersion(__develop__, __version__)
+        function.setStyleTheme("themes/base_dark.qss")
 
         self.frTitleBar.mouseDoubleClickEvent = function.dobleClickMaximizeRestore
         self.frTitleBar.mouseMoveEvent = function.moveWindow
@@ -34,6 +35,10 @@ class WinPyBase(QMainWindow, Ui_PyBase):
         self.btClose.clicked.connect(lambda: self.close())
 
         self.btHide.clicked.connect(lambda: function.extendFrame(190, self.frMenuLateral))
+
+        self.bt.clicked.connect(lambda: function.setButtomSelect(self.bt))
+        self.bt2.clicked.connect(lambda: function.setButtomSelect(self.bt2))
+        self.bt3.clicked.connect(lambda: function.setButtomSelect(self.bt3))
 
     def mousePressEvent(self, event):
         function = Function(self)

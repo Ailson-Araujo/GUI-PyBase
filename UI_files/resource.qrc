@@ -6,4 +6,10 @@
     <file>16x16/cil-minus.png</file>
     <file>16x16/cil-x.png</file>
   </qresource>
+  <qresource prefix="24x24">
+    <file>24x24/cross.png</file>
+    <file>24x24/menu.png</file>
+    <file>24x24/monitor.png</file>
+    <file>24x24/settings.png</file>
+  </qresource>
 </RCC>
