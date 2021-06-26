@@ -114,17 +114,17 @@ QToolTip {
 /*####################################################*/
 /*####################################################*/
 
-QTableWidget {	
+QTableWidget, QTableView {	
 	background-color: #21252b;
 	border-radius: 5px;
 	gridline-color: #2c313c;
 	/*border-bottom: 0px solid #2c313c;*/
 }
-QTableWidget::item{
+QTableWidget::item, QTableView::item{
 	border-color: #2c313c;
 	gridline-color: #2c313c;
 }
-QTableWidget::item:selected{
+QTableWidget::item:selected, QTableView::item:selected{
 	background-color: #55aaff;
 }
 
@@ -324,6 +324,7 @@ QGroupBox{
 	border-radius: 5px;
 	color: #ffffff;
 	background-color: #21252b;
+	padding-top: 15px;
 }
 
 QGroupBox::title {
