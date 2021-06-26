@@ -137,7 +137,7 @@ class Function:
         self._parent.setStyleSheet(theme)
 
     # Destaca o botão que foi selecionado
-    def setButtomSelect(self, buttom: QPushButton):
+    def setButtonSelected(self, buttom: QPushButton):
         for widget in self._parent.frMenuLateral.findChildren(QPushButton):
             if widget.objectName() == buttom.objectName():
                 widget.setStyleSheet(SELECT)
