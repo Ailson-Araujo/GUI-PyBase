@@ -1,3 +1,23 @@
+########################################################################
+## Copyright © 2021, Ailson Araujo
+##
+## Licensed under the Apache License, Version 2.0 (the "License");
+## you may not use this file except in compliance with the License.
+## You may obtain a copy of the License at
+##
+##     http://www.apache.org/licenses/LICENSE-2.0
+##
+## Unless required by applicable law or agreed to in writing, software
+## distributed under the License is distributed on an "AS IS" BASIS,
+## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+## See the License for the specific language governing permissions and
+## limitations under the License.
+##
+## Versão: 1.0
+##
+## Projeto feito com Qt Designer, PySide6.
+########################################################################
+
 from PySide6.QtCore import QEasingCurve, QEvent, QPropertyAnimation, Qt, QTimer
 from PySide6.QtGui import QColor, QIcon
 from PySide6.QtWidgets import QGraphicsDropShadowEffect, QPushButton, QSizeGrip
@@ -20,6 +40,9 @@ class Function:
 
         self._parent.labelDevelop.setText(develop)
         self._parent.labelVersion.setText(version)
+
+    def setAppName(self, name: str):
+        self._parent.labelAppName.setText(name)
 
     def setPosition(self, event):
         """Recebe a posição do mouse. Usado para complemetar
@@ -114,7 +137,7 @@ class Function:
         self._parent.setStyleSheet(theme)
 
     # Destaca o botão que foi selecionado
-    def setButtomSelect(self, buttom):
+    def setButtomSelect(self, buttom: QPushButton):
         for widget in self._parent.frMenuLateral.findChildren(QPushButton):
             if widget.objectName() == buttom.objectName():
                 widget.setStyleSheet(SELECT)
