@@ -1,0 +1,460 @@
+
+QWidget{
+	color: #ffffff;
+	font: 8pt "Segoe UI";
+}
+
+QFrame{
+	background-color: transparent;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+#frMenuLateral, #frTitleBar{
+	background-color: #1b1d23;
+}
+
+#frStatusBar{
+	background-color: #21252b;
+}
+
+#frContent{
+	background-color: #282c34;
+}
+
+#frame{
+	background-color: #23272d;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+#labelDevelop, #labelVersion{
+	background-color: transparent;
+	color: #787878;
+	margin: 0px 5px;
+	font-size: 8pt;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+#frame QPushButton {
+	border: 2px solid #343b48;
+	border-radius: 5px;	
+	background-color: #343b48;
+	color: rgb(210, 210, 210);
+}
+
+#frame QPushButton:hover {
+	background-color: #394150;
+	border: 2px solid #3d4656;
+}
+
+#frame QPushButton:pressed {	
+	background-color: #232831;
+	border: 2px solid #2b323d;
+}
+
+#frMenuLateral QPushButton, #frTitleBar QPushButton{
+	background-color: transparent;
+}
+
+#frMenuLateral QPushButton{
+	border: none;
+	background-position: left center;
+    background-repeat: no-repeat;
+	background-color:transparent;
+	border-left: 13px solid transparent;
+	text-align: left;
+	padding-left: 44px;
+}
+
+#frMenuLateral QPushButton:hover{background-color: #21252b;}
+#frMenuLateral QPushButton:pressed {background-color: #55aaff;}
+
+#btHide{background-image: url(:/24x24/24x24/menu.png);}
+#bt{background-image: url(:/24x24/24x24/monitor.png);}
+#bt2{background-image: url(:/24x24/24x24/cross.png);}
+#bt3{background-image: url(:/24x24/24x24/menu.png);}
+#btSettings{background-image: url(:/24x24/24x24/settings.png);}
+
+
+#frTitleBar QPushButton:hover{
+	background-color: #21252b;
+	border-radius: 3px;
+}
+
+#frTitleBar QPushButton:pressed{
+	background-color: rgb(23, 26, 30);
+	border-radius: 3px;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+#labelAppName{
+	font: bold 10pt "Segoe UI";
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QToolTip {
+	color: #ffffff;
+	background-color: #21252b;
+	border: 1px solid #282c34;
+	border-left: 2px solid #55aaff;
+	text-align: left;
+	padding-left: 8px;
+	margin: 0px;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QTableWidget {	
+	background-color: #21252b;
+	border-radius: 5px;
+	gridline-color: #2c313c;
+	/*border-bottom: 0px solid #2c313c;*/
+}
+QTableWidget::item{
+	border-color: #2c313c;
+	gridline-color: #2c313c;
+}
+QTableWidget::item:selected{
+	background-color: #55aaff;
+}
+
+QHeaderView::section:horizontal
+{
+    border: 1px solid #20222a;
+	background-color: #1b1d23;
+	padding: 3px;
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+QHeaderView::section:vertical
+{
+    border: 1px solid #20222a;
+	background-color: #1b1d23;
+	padding: 3px;
+	border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QLineEdit {
+	background-color: #1b1d23;
+	border: 2px solid #1b1d23;
+	border-radius: 5px;
+    color: #787878;
+}
+QLineEdit:hover {
+	border: 2px solid #3d4656;
+}
+QLineEdit:focus {
+	border: 2px solid #55aaff;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QTextEdit {
+	background-color: #1b1d23;
+	border: 2px solid #1b1d23;
+	border-radius: 5px;
+	padding:  5px 2px 5px 5px;
+    color: #787878;
+}
+QTextEdit:hover {
+	border: 2px solid #3d4656;
+}
+QTextEdit:focus {
+	border: 2px solid #55aaff;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QScrollBar:horizontal {
+    border: none;
+    background: #343b48;
+    height: 8px;
+    margin: 0px 21px 0 21px;
+	border-radius: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #55aaff;
+    min-width: 25px;
+	border-radius: 4px
+}
+
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: #2b323d;
+    width: 20px;
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: #35434d;
+    width: 20px;
+	border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+    background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+    background: #343b48;
+    width: 8px;
+    margin: 21px 0 21px 0;
+	border-radius: 0px;
+}
+
+QScrollBar::handle:vertical {	
+	background: #55aaff;
+    min-height: 25px;
+	border-radius: 4px
+}
+
+QScrollBar::add-line:vertical {
+    border: none;
+    background: #35434d;
+    height: 20px;
+	border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+	border: none;
+    background: #35434d;
+    height: 20px;
+	border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QCheckBox{
+	background-color: transparent;
+	color: #ffffff;
+}
+
+QCheckBox::indicator {
+    border: 3px solid #343b48;
+	width: 12px;
+	height: 12px;
+	border-radius: 9px;
+    background: #2c313c;
+}
+
+QCheckBox::indicator:hover {
+    border: 3px solid #3a4251;
+}
+
+QCheckBox::indicator:checked {
+    background: 3px solid #343b48;
+	border: 3px solid #343b48;
+	background-image: url(:/16x16/16x16/cil-check-alt.png);
+}
+
+/*####################################################*/
+/*####################################################*/
+
+
+QRadioButton::indicator {
+    border: 3px solid #343b48;
+	width: 12px;
+	height: 12px;
+	border-radius: 9px;
+    background: #2c313c;
+	background-color: transparent; 
+	color: #787878;
+}
+
+QRadioButton::indicator:hover {
+    border: 3px solid #3a4251;
+}
+
+QRadioButton::indicator:checked {
+    background: 3px solid #55aaff;
+	border: 3px solid #343b48;	
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QGroupBox{
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #21252b;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QComboBox{
+	background-color: #1b1d23;
+	color: #787878;
+	border-radius: 5px;
+	border: 2px solid #1b1d23;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 25px; 
+	border-left-width: 3px;
+	border-left-color: #282c34;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-image: url(:/16x16/16x16/cil-arrow-bottom.png);
+	background-position: center;
+	background-repeat: no-reperat;
+}
+
+QComboBox:hover{
+	border: 2px solid #55aaff;
+	color: #ffffff;
+}
+
+QComboBox QAbstractItemView {
+	color: #787878;	
+	background-color: #1b1d23;
+	padding: 9px;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QSlider::groove:horizontal {
+    border-radius: 5px;
+    height: 10px;
+	margin: 0px;
+	background-color: #343b48;
+}
+QSlider::groove:horizontal:hover {
+	background-color: #343b48;
+}
+QSlider::handle:horizontal {
+    background-color: #55aaff;
+    border: none;
+    height: 10px;
+    width: 10px;
+    margin: 0px;
+	border-radius: 5px;
+}
+QSlider::handle:horizontal:hover {
+    background-color: #3d4656;
+}
+QSlider::handle:horizontal:pressed {
+    background-color: #2b323d;
+}
+
+QSlider::groove:vertical {
+    border-radius: 5px;
+    width: 10px;
+    margin: 0px;
+	background-color: #343b48;
+}
+QSlider::groove:vertical:hover {
+	background-color: #3d4656;
+}
+QSlider::handle:vertical {
+    background-color: #55aaff;
+	border: none;
+    height: 10px;
+    width: 10px;
+    margin: 0px;
+	border-radius: 5px;
+}
+QSlider::handle:vertical:hover {
+    background-color: #3d4656;
+}
+QSlider::handle:vertical:pressed {
+    background-color: #3d4656;
+}
+
+/*####################################################*/
+/*####################################################*/
+
+QSpinBox, QDoubleSpinBox{
+	background-color: #1b1d23;
+	border: 2px solid #1b1d23;
+	border-radius: 5px;
+	color: rgb(170, 170, 170);
+}
+
+QSpinBox:hover, QDoubleSpinBox:hover {
+	border: 2px solid #3d4656;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+	background-image: url(:/16x16/16x16/cil-caret-top.png);
+	background-position: center;
+	background-repeat: no-reperat;
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 19px; 
+}
+
+QSpinBox::up-button:pressed, QDoubleSpinBox::up-button:pressed {
+	background-image: url(:/16x16/16x16/cil-caret-top2.png);
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+	background-image: url(:/16x16/16x16/cil-caret-bottom.png);
+	background-position: center;
+	background-repeat: no-reperat;
+	subcontrol-origin: padding;
+	subcontrol-position: bottom right;
+	width: 19px; 
+}
+
+QSpinBox::down-button:pressed, QDoubleSpinBox::down-button:pressed {
+	background-image: url(:/16x16/16x16/cil-caret-bottom2.png);
+}
